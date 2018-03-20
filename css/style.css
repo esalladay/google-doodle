@@ -1,120 +1,213 @@
-/* Doodle Stage */
 #stage {
-  background: #fff;
-  height: 300px;
+  background: white;
+  height: 600px;
   width: 600px;
+  position: relative;
   overflow: hidden;
 }
 
-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0px;
+#search {
   text-align: center;
-  width: 600px;
-  height: 100px;
 }
 
 h1 {
+  font-family: 'vaporized-bb';
   color: black;
-  font-family: 'Spectral SC', 'extra-bold', serif;
-  font-size: 7em;
-  text-transform: uppercase;
-  position: relative;
-  top: 10px;
+  position: absolute;
+  left: 145px;
+  bottom: 285px;
+  -webkit-animation: fadeInUp 6s infinite;
+          animation: fadeInUp 6s infinite;
 }
 
 #one {
-  letter-spacing: 0px;
-  position: relative;
-  top: 18px;
+  letter-spacing: -10px;
 }
 
 #two {
-  letter-spacing: 30px;
+  letter-spacing: -10px;
 }
 
 #three {
-  letter-spacing: 20px;
+  letter-spacing: 138px;
 }
 
 #four {
-  letter-spacing: 20px;
+  letter-spacing: -8px;
 }
 
-img {
-  width: 100px;
-  height: 100px;
-  margin-top: 0em;
-  margin-right: .25em;
-  -webkit-transition: 2s;
-  transition: 2s;
+#five {
+  letter-spacing: -5px;
+}
+
+@font-face {
+  font-family: 'vaporized-bb';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1488101/vaporized-bb.italic.ttf");
+}
+.city {
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
   position: relative;
-  top: 10px;
 }
 
-#stage:hover img {
-  -webkit-transform: scale(1) rotate(360deg);
-          transform: scale(1) rotate(360deg);
+.city:hover {
+  color: blue;
 }
 
-path {
-  background: rgba(255, 255, 255, 0.35);
-  -webkit-transition: margin-top .5s ease-in-out;
-  transition: margin-top .5s ease-in-out;
+.largeblimp {
   position: relative;
-  -webkit-transform: scale(0.5) translate(250px, 500px);
-          transform: scale(0.5) translate(250px, 500px);
+  top: 50px;
+  right: 410px;
+  -webkit-animation: blimpright 20s linear infinite;
+          animation: blimpright 20s linear infinite;
 }
 
-#stage:hover path {
-  background: rgba(255, 255, 255, 0.35);
-  -webkit-transition: margin-top .5s ease-in-out;
-  transition: margin-top .5s ease-in-out;
+@-webkit-keyframes blimpright {
+  0% {
+    right: 570px;
+  }
+  100% {
+    right: -700px;
+  }
+}
+
+@keyframes blimpright {
+  0% {
+    right: 570px;
+  }
+  100% {
+    right: -700px;
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+.motorcyclist {
+  -webkit-transform: scale(0.07);
+          transform: scale(0.07);
   position: relative;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  -webkit-animation: dash 5s linear alternate infinite;
-          animation: dash 5s linear alternate infinite;
-  -webkit-transform: scale(0.45) translate(300px, 0px);
-          transform: scale(0.45) translate(300px, 0px);
-  overflow: hidden;
+  top: -320px;
+  right: -380px;
+  -webkit-animation: motorcyclist 6s 1;
+          animation: motorcyclist 6s 1;
 }
 
-@-webkit-keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
+@-webkit-keyframes motorcyclist {
+  0% {
+    right: -380px;
   }
-  to {
-    stroke-dashoffset: 0;
+  100% {
+    right: 700px;
   }
 }
 
-@keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
+@keyframes motorcyclist {
+  0% {
+    right: -380px;
   }
-  to {
-    stroke-dashoffset: 0;
+  100% {
+    right: 700px;
   }
 }
-/* path {
-  stroke-dasharray: 100 ;
-  stroke-dashoffset: 1;
-  animation: dash 15s 2s 1 linear;
-  transform: scale(.25) translate(800px, 300px);
+.birdman {
+  width: 10%;
+  height: 10%;
+  position: relative;
+  top: -620px;
+  right: -320px;
+  -webkit-animation: bounceUp 6s linear 1;
+          animation: bounceUp 6s linear 1;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
-@keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
+.couple {
+  width: 13%;
+  height: 13%;
+  position: relative;
+  top: -650px;
+  right: -100px;
+  -webkit-animation: bounceUp2 6s linear 1;
+          animation: bounceUp2 6s linear 1;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.carriage {
+  width: 20%;
+  height: 20%;
+  position: relative;
+  top: -670px;
+  left: 320px;
+  -webkit-animation: slideIn 6s 1;
+          animation: slideIn 6s 1;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    left: 1600px;
   }
-  to {
-    stroke-dashoffset: 1;
+  100% {
+    left: 320px;
   }
 }
-*/
+
+@keyframes slideIn {
+  0% {
+    left: 1600px;
+  }
+  100% {
+    left: 320px;
+  }
+}
+@-webkit-keyframes bounceUp {
+  0% {
+    top: -400px;
+  }
+  100% {
+    top: -620px;
+  }
+}
+@keyframes bounceUp {
+  0% {
+    top: -400px;
+  }
+  100% {
+    top: -620px;
+  }
+}
+@-webkit-keyframes bounceUp2 {
+  0% {
+    top: -400px;
+  }
+  100% {
+    top: -650px;
+  }
+}
+@keyframes bounceUp2 {
+  0% {
+    top: -400px;
+  }
+  100% {
+    top: -650px;
+  }
+}

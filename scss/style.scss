@@ -1,112 +1,166 @@
-// External styling from: https://codepen.io/manikoth/pen/NNNBYe.css
-
-/* Doodle Stage */
-#stage {
-  background: #fff;
-  height: 300px;
-  width: 600px;
-  
-  overflow:hidden;
+#stage{
+    background: white;
+    height: 600px;
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+}
+#search{
+text-align:center;
 }
 
-container{
-  display:flex;
-  align-items:center;
-  margin:0px;
-  text-align: center;
-  width:600px;
-  height: 100px;
-  
+h1{
+  font-family: 'vaporized-bb';
+  color:black;
+  position: absolute;
+  left: 145px;
+  bottom: 285px;
+  animation: fadeInUp 6s infinite;
 }
 
-h1 {
-  color: black;
-  font-family: 'Spectral SC', 'extra-bold', serif;
-  font-size:7em;
-  text-transform: uppercase;
-  position: relative;
-  top: 10px;
+#one{
+  letter-spacing: -10px;
 }
 
-#one {
-  letter-spacing: 0px;
-  position: relative;
-  top: 18px;
-}
-
-#two {
-  letter-spacing: 30px;  
+#two{
+  letter-spacing: -10px;
 }
 
 #three {
-  letter-spacing: 20px;  
+  letter-spacing: 138px;
 }
 
-#four {
-  letter-spacing: 20px;  
+#four{
+  letter-spacing: -8px;
 }
 
+#five{
+  letter-spacing: -5px;
+}
+@font-face {
+  font-family: 'vaporized-bb';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1488101/vaporized-bb.italic.ttf');
+}
 
-//first frame
-img{
-  width:100px;
-  height:100px;
-  margin-top: 0em;
-  margin-right:.25em;
-  transition: 2s;
+.city{
+  transform: scale(.75);
   position: relative;
-  top:10px; 
+}
+.city:hover{
+  color: blue;
 }
 
-//last frame
-#stage:hover img{
-  transform: scale(1) rotate(360deg);
- 
-}
-//first frame
-path {
-  background: rgba(255,255,255,.35);
-  transition: margin-top .5s ease-in-out;
+//blimp animation
+.largeblimp{
   position: relative;
-  transform: scale(.5) translate(250px, 500px);
+  top:50px;
+  right: 410px;
+  animation:
+             blimpright 20s linear infinite;
 }
-//last frame
-#stage:hover path{
-  background: rgba(255,255,255,.35);
-  transition: margin-top .5s ease-in-out;
-  position: relative;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s linear alternate infinite;
-  transform: scale(.45) translate(300px, 0px);
+
+@keyframes blimpright {
   
-  overflow:hidden;
+  0% {
+       right: 570px;
+    
+  }
+  
+  100% { 
+    right: -700px;
+    
+  }   
 }
 
-@keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(5px);
   }
-  to {
-    stroke-dashoffset: 0;
+  50% {
+    transform: translateY(-5px);
   }
 }
 
-//https://codepen.io/chriscoyier/pen/bGyoz 
-
-/* path {
-  stroke-dasharray: 100 ;
-  stroke-dashoffset: 1;
-  animation: dash 15s 2s 1 linear;
-  transform: scale(.25) translate(800px, 300px);
+//motorcycle animations
+.motorcyclist{
+  transform: scale(.07);
+  position:relative;
+  top: -320px;
+  right: -380px;
+  animation: motorcyclist 6s 1;
 }
 
-@keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
+@keyframes motorcyclist {
+  
+  0% {
+       right: -380px;
   }
-  to {
-    stroke-dashoffset: 1;
+  
+  100% { 
+    right: 700px;
+    
+  }   
+}
+
+//people animations
+.birdman{
+  width: 10%;
+  height: 10%;
+  position: relative;
+  top: -620px;
+  right:-320px;
+  animation: bounceUp 6s linear 1;
+  transform-origin: 50% 50%;
+}
+
+.couple{
+  width: 13%;
+  height: 13%;
+  position: relative;
+  top: -650px;
+  right:-100px;
+  animation: bounceUp2 6s linear 1;
+  transform-origin: 50% 50%;
+}
+
+.carriage{
+  width:20%;
+  height:20%;
+  position: relative;
+  top: -670px;
+  left: 320px;
+  animation: slideIn 6s 1;
+  transform-origin: 50% 50%;
+  
+}
+
+@keyframes slideIn{
+  0%{
+    left: 1600px;
+  }
+  
+  100%{
+    left: 320px;
   }
 }
-*/
+
+@keyframes bounceUp {
+  0%{
+  top: -400px;
+  }
+  
+  100%{
+    top: -620px;
+  }
+}
+
+
+@keyframes bounceUp2 {
+  0%{
+  top: -400px;
+  }
+  
+  100%{
+    top: -650px;
+  }
+}
