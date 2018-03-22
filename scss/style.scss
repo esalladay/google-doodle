@@ -1,79 +1,97 @@
-#stage{
-    background: white;
-    height: 600px;
-    width: 600px;
-    position: relative;
-    overflow: hidden;
+#stage {
+  background: white;
+  height: 600px;
+  width: 600px;
+  position: relative;
+  overflow: hidden;
 }
-#search{
-text-align:center;
+#search {
+  text-align: center;
 }
 
-h1{
-  font-family: 'vaporized-bb';
-  color:black;
+h1 {
+  font-family: "vaporized-bb";
+  color: #3E2723;
+}
+
+#one {
+  letter-spacing: -10px;
   position: absolute;
   left: 145px;
-  bottom: 285px;
-  animation: fadeInUp 6s infinite;
+  bottom: 275px;
+  animation: fadeInUp 4s ease-out infinite;
 }
 
-#one{
+#two {
   letter-spacing: -10px;
-}
-
-#two{
-  letter-spacing: -10px;
+  position: absolute;
+  left: 175px;
+  bottom: 275px;
+  animation: fadeInUp 6s ease-out infinite;
 }
 
 #three {
   letter-spacing: 138px;
+  position: absolute;
+  left: 205px;
+  bottom: 275px;
+  animation: fadeInUp 7.5s ease-out infinite;
 }
 
-#four{
+#four {
   letter-spacing: -8px;
+  position: absolute;
+  left: 382px;
+  bottom: 275px;
+  animation: fadeInUp 7.5s ease-out infinite;
 }
 
-#five{
+#five {
   letter-spacing: -5px;
+  position: absolute;
+  left: 412px;
+  bottom: 275px;
+  animation: fadeInUp 6.5s ease-out  infinite;
+}
+
+#six {
+  position: absolute;
+  left: 442px;
+  bottom: 275px;
+  animation: fadeInUp 4.5s ease-out infinite;
 }
 @font-face {
-  font-family: 'vaporized-bb';
-  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1488101/vaporized-bb.italic.ttf');
+  font-family: "vaporized-bb";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1488101/vaporized-bb.italic.ttf");
 }
 
-.city{
-  transform: scale(.75);
+.city {
+  transform: scale(0.75);
   position: relative;
-}
-.city:hover{
-  color: blue;
+  top: -78px;
 }
 
 //blimp animation
-.largeblimp{
+.largeblimp {
   position: relative;
-  top:50px;
+  top: 30px;
   right: 410px;
-  animation:
-             blimpright 20s linear infinite;
+  animation: blimpright 20s linear infinite;
 }
 
 @keyframes blimpright {
-  
   0% {
-       right: 570px;
-    
+    right: 570px;
   }
-  
-  100% { 
+
+  100% {
     right: -700px;
-    
-  }   
+  }
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(5px);
   }
   50% {
@@ -82,85 +100,99 @@ h1{
 }
 
 //motorcycle animations
-.motorcyclist{
-  transform: scale(.07);
-  position:relative;
-  top: -320px;
+.motorcyclist {
+  transform: scale(0.07);
+  position: relative;
+  top: -400px;
   right: -380px;
   animation: motorcyclist 6s 1;
 }
 
 @keyframes motorcyclist {
-  
   0% {
-       right: -380px;
+    right: -380px;
   }
-  
-  100% { 
+
+  100% {
     right: 700px;
-    
-  }   
+  }
 }
 
 //people animations
-.birdman{
+.birdman {
   width: 10%;
   height: 10%;
   position: relative;
-  top: -620px;
-  right:-320px;
-  animation: bounceUp 6s linear 1;
+  top: -730px;
+  right: -320px;
+  animation: bounceUp 4s linear 1;
   transform-origin: 50% 50%;
 }
 
-.couple{
+.couple {
   width: 13%;
   height: 13%;
   position: relative;
-  top: -650px;
-  right:-100px;
+  top: -750px;
+  right: -100px;
   animation: bounceUp2 6s linear 1;
   transform-origin: 50% 50%;
 }
 
-.carriage{
-  width:20%;
-  height:20%;
+.carriage {
+  width: 20%;
+  height: 20%;
   position: relative;
-  top: -670px;
-  left: 320px;
+  top: -750px;
+  left: 290px;
   animation: slideIn 6s 1;
   transform-origin: 50% 50%;
-  
 }
 
-@keyframes slideIn{
-  0%{
+@keyframes slideIn {
+  0% {
     left: 1600px;
   }
-  
-  100%{
-    left: 320px;
+
+  100% {
+    left: 290px;
   }
 }
 
 @keyframes bounceUp {
-  0%{
-  top: -400px;
+  0% {
+    top: -400px;
   }
-  
-  100%{
-    top: -620px;
+
+  100% {
+    top: -720px;
   }
 }
 
-
 @keyframes bounceUp2 {
-  0%{
-  top: -400px;
+  0% {
+    top: -400px;
   }
-  
-  100%{
-    top: -650px;
+
+  100% {
+    top: -750px;
+  }
+}
+
+//fadein
+
+@keyframes fadein {
+  0% {
+    display: none;
+    opacity: 0;
+    bottom: 245px;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: 265px;
   }
 }
