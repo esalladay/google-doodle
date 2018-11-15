@@ -1,11 +1,13 @@
+
+
 #stage {
   background: white;
   height: 600px;
   width: 600px;
   position: relative;
   overflow: hidden;
+ 
 }
-
 #search {
   text-align: center;
 }
@@ -20,8 +22,7 @@ h1 {
   position: absolute;
   left: 145px;
   bottom: 275px;
-  -webkit-animation: fadeInUp 4s ease-out infinite;
-          animation: fadeInUp 4s ease-out infinite;
+  animation: fadeInUp 4s ease-out infinite;
 }
 
 #two {
@@ -29,8 +30,7 @@ h1 {
   position: absolute;
   left: 175px;
   bottom: 275px;
-  -webkit-animation: fadeInUp 6s ease-out infinite;
-          animation: fadeInUp 6s ease-out infinite;
+  animation: fadeInUp 6s ease-out infinite;
 }
 
 #three {
@@ -38,8 +38,7 @@ h1 {
   position: absolute;
   left: 205px;
   bottom: 275px;
-  -webkit-animation: fadeInUp 7.5s ease-out infinite;
-          animation: fadeInUp 7.5s ease-out infinite;
+  animation: fadeInUp 7.5s ease-out infinite;
 }
 
 #four {
@@ -47,8 +46,7 @@ h1 {
   position: absolute;
   left: 382px;
   bottom: 275px;
-  -webkit-animation: fadeInUp 7.5s ease-out infinite;
-          animation: fadeInUp 7.5s ease-out infinite;
+  animation: fadeInUp 7.5s ease-out infinite;
 }
 
 #five {
@@ -56,203 +54,160 @@ h1 {
   position: absolute;
   left: 412px;
   bottom: 275px;
-  -webkit-animation: fadeInUp 6.5s ease-out  infinite;
-          animation: fadeInUp 6.5s ease-out  infinite;
+  animation: fadeInUp 6.5s ease-out  infinite;
 }
 
 #six {
   position: absolute;
   left: 442px;
   bottom: 275px;
-  -webkit-animation: fadeInUp 4.5s ease-out infinite;
-          animation: fadeInUp 4.5s ease-out infinite;
+  animation: fadeInUp 4.5s ease-out infinite;
 }
-
 @font-face {
   font-family: "vaporized-bb";
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1488101/vaporized-bb.italic.ttf");
 }
+
 .city {
-  -webkit-transform: scale(0.75);
-          transform: scale(0.75);
+  transform: scale(0.75);
   position: relative;
   top: -78px;
 }
 
+//blimp animation
 .largeblimp {
   position: relative;
-  top: 30px;
+  top: 105px;
   right: 410px;
-  -webkit-animation: blimpright 20s linear infinite;
-          animation: blimpright 20s linear infinite;
-}
-
-@-webkit-keyframes blimpright {
-  0% {
-    right: 570px;
-  }
-  100% {
-    right: -700px;
-  }
+ -webkit-transform: translateZ(0);
+  animation: blimpright 20s linear infinite;
 }
 
 @keyframes blimpright {
   0% {
     right: 570px;
   }
+
   100% {
     right: -700px;
   }
 }
-@-webkit-keyframes bounce {
-  0%,
-  100% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-  }
-  50% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-  }
-}
+
 @keyframes bounce {
   0%,
   100% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
+    transform: translateY(5px);
   }
   50% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    transform: translateY(-5px);
   }
-}
-.motorcyclist {
-  -webkit-transform: scale(0.07);
-          transform: scale(0.07);
-  position: relative;
-  top: -400px;
-  right: -380px;
-  -webkit-animation: motorcyclist 6s 1;
-          animation: motorcyclist 6s 1;
 }
 
-@-webkit-keyframes motorcyclist {
-  0% {
-    right: -380px;
-  }
-  100% {
-    right: 700px;
-  }
+//motorcycle animations
+.motorcyclist {
+  transform: scale(0.07);
+  position: relative;
+  top: -360px;
+  right: -380px;
+  animation: motorcyclist 5s 0s infinite;
 }
 
 @keyframes motorcyclist {
   0% {
     right: -380px;
   }
+
   100% {
     right: 700px;
   }
 }
+
+//people animations
 .birdman {
-  width: 10%;
-  height: 10%;
+  width: 8%;
+  height: 8%;
   position: relative;
-  top: -730px;
-  right: -320px;
-  -webkit-animation: bounceUp 4s linear 1;
-          animation: bounceUp 4s linear 1;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  top: -760px;
+  right: -450px;
+  // animation: bounceUp 4s linear 1;
+  animation: bounceUp 1.5s ease-out 0s alternate infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes bounceUp {
+  0% {
+  
+    top: -760px;
+    
+  }
+
+  100% {
+    top: -770px;
+    
+  }
 }
 
 .couple {
-  width: 13%;
-  height: 13%;
+  width: 7%;
+  height: 7%;
   position: relative;
-  top: -750px;
-  right: -100px;
-  -webkit-animation: bounceUp2 6s linear 1;
-          animation: bounceUp2 6s linear 1;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  top: -790px;
+  left: 220px;
+  // animation: bounceUp2 10s linear 1;
+  animation: zoomIn 5s .1s infinite;
+  transform-origin: 50% 50%;
 }
 
 .carriage {
   width: 20%;
   height: 20%;
   position: relative;
-  top: -750px;
-  left: 290px;
-  -webkit-animation: slideIn 6s 1;
-          animation: slideIn 6s 1;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-}
-
-@-webkit-keyframes slideIn {
-  0% {
-    left: 1600px;
-  }
-  100% {
-    left: 290px;
-  }
+  top: -740px;
+  left: -470px;
+  animation: slideIn 6s 0s infinite;
+  transform-origin: 50% 50%;
 }
 
 @keyframes slideIn {
   0% {
     left: 1600px;
   }
+
+  50% {
+    left: 100px;
+  }
+  
+  75% {
+    left: 100px;
+  }
+  
   100% {
-    left: 290px;
+    left: -400px;
   }
+  
 }
-@-webkit-keyframes bounceUp {
+
+
+@keyframes zoomIn {
   0% {
-    top: -400px;
-  }
-  100% {
-    top: -720px;
-  }
-}
-@keyframes bounceUp {
-  0% {
-    top: -400px;
-  }
-  100% {
-    top: -720px;
-  }
-}
-@-webkit-keyframes bounceUp2 {
-  0% {
-    top: -400px;
-  }
-  100% {
-    top: -750px;
-  }
-}
-@keyframes bounceUp2 {
-  0% {
-    top: -400px;
-  }
-  100% {
-    top: -750px;
-  }
-}
-@-webkit-keyframes fadein {
-  0% {
-    display: none;
     opacity: 0;
-    bottom: 245px;
+    transform: scale(0.1);
+    -webkit-transform: scale(0.1);
+   
   }
-  1% {
-    display: block;
-    opacity: 0;
-  }
-  100% {
+  
+  80% {
     opacity: 1;
-    bottom: 265px;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(7%);
+    -webkit-transform: scale(7%);
   }
 }
+
+//fadein
+
 @keyframes fadein {
   0% {
     display: none;
