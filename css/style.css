@@ -74,7 +74,7 @@ h1 {
   top: -78px;
 }
 
-//blimp animation
+/* blimp animation */
 .largeblimp {
   position: relative;
   top: 105px;
@@ -103,7 +103,7 @@ h1 {
   }
 }
 
-//motorcycle animations
+/* motorcycle animations */
 .motorcyclist {
   transform: scale(0.07);
   position: relative;
@@ -122,7 +122,7 @@ h1 {
   }
 }
 
-//people animations
+/* people animations */
 .birdman {
   width: 8%;
   height: 8%;
@@ -206,7 +206,7 @@ h1 {
   }
 }
 
-//fadein
+/* //fadein */
 
 @keyframes fadein {
   0% {
